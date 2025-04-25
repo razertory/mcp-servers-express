@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./",
+    "target": "ES2022", // Or a suitable target for your Node.js version
+    "module": "NodeNext", // Use NodeNext for modern Node.js ESM support
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist", // Specifies the output directory for compiled JS files
+    "rootDir": "./", // Specifies the root directory of input TS files
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "declaration": true,
-    "lib": ["ES2020", "DOM"]
+    "declaration": true, // Generate .d.ts files
+    "declarationDir": "./dist", // Output .d.ts files to the same dist directory
+    "resolveJsonModule": true // Allows importing JSON files
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts" // Include all .ts files in the project root and subdirectories
+  ],
+  "exclude": [
+    "node_modules", // Exclude the node_modules directory
+    "dist" // Exclude the output directory
+  ]
 }

@@ -9,7 +9,7 @@
     "dev": "ts-node-dev --respawn --transpile-only index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "prestart": "npm run build"
+    "prestart": "pnpm run build"
   },
   "keywords": ["MCP", "Path Variables", "Express"],
   "author": "spring.razer@gmail.com",
